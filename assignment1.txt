@@ -1,0 +1,55 @@
+1. Grade Classification System
+Scenario: You are building a system that categorizes student grades into letter grades (A, B, C, D, F) based on the score.
+
+Assignment: Write a Java program that takes the grades of 10 students (between 0 and 100) as input and assigns a letter grade using the following criteria:
+
+A: 90 - 100
+B: 80 - 89
+C: 70 - 79
+D: 60 - 69
+F: Below 60
+Print the grade for each student, the highest grade, the lowest grade, and the number of students who passed (grades A, B, C) and failed (grades D, F). Use loops and if statements where appropriate.
+
+2. Online Store Discount System
+Scenario: You are creating a discount calculator for an online store. The store has the following discount structure based on the total purchase amount:
+
+5% discount for orders between $100 and $200.
+10% discount for orders between $201 and $500.
+20% discount for orders above $500.
+Assignment: Write a Java program that accepts the purchase amount for 5 different customers and calculates the final price after applying the discount. Use loops to input each purchase and if statements to apply the appropriate discount.
+
+At the end of the program, display the final price for each customer and the total amount earned by the store after all discounts have been applied.
+
+3. Employee Overtime Calculator
+Scenario: A company pays its employees based on hours worked. Any employee who works more than 40 hours in a week earns overtime pay. The overtime rate is 1.5 times the regular hourly wage.
+
+Assignment: Write a Java program that:
+
+Asks the user to input the regular hourly wage and the hours worked for 5 employees.
+Calculates the total weekly wage for each employee. If an employee works more than 40 hours, calculate overtime pay for the additional hours.
+Use if statements to check if overtime is needed and use a loop to repeat the process for each employee.
+At the end, display the total wages for each employee and the total amount the company has to pay in wages.
+
+4. Parking Garage Fee Calculator
+Scenario: A parking garage charges customers based on the number of hours they park their cars. The rates are as follows:
+
+First hour: $5
+Each additional hour (up to 5 hours): $3
+After 5 hours, there’s a flat rate of $20 for the entire day.
+Assignment: Write a Java program that calculates the parking fee for 10 customers. Use a loop to input the number of hours each customer parked, and use if statements to calculate the total fee based on the parking time.
+
+At the end, display the total fee for each customer and the total revenue for the garage.
+
+5. Fitness Club Membership System
+Scenario: A fitness club charges different rates for its members based on their membership type:
+
+Basic membership: $30/month.
+Standard membership: $45/month.
+Premium membership: $60/month.
+Members can also add the following optional services:
+
+Personal trainer: Additional $20/month.
+Nutritionist: Additional $15/month.
+Assignment: Write a Java program that asks for 5 members' membership types and whether they want to add any optional services. Calculate the total monthly cost for each member using if statements and display it. Additionally, calculate and display the total income for the fitness club from these 5 members.
+
+Use a loop to input data for each member and if statements to check membership type and optional services.
