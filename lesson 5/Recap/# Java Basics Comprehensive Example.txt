@@ -1,0 +1,329 @@
+# Java Basics: Comprehensive Examples
+## Detailed Guide Before Learning Functions
+
+---
+# 1. Data Types in Action
+
+## Integer (int) Examples
+```java
+int studentsInClass = 25;
+int maxScore = 100;
+int minScore = 0;
+
+// Integer operations
+int totalStudents = studentsInClass + 5;  // Addition: 30
+int remainingSeats = maxScore - studentsInClass;  // Subtraction: 75
+int totalPoints = maxScore * 2;  // Multiplication: 200
+int studentsPerGroup = studentsInClass / 5;  // Division: 5
+```
+
+## Double Examples
+```java
+double temperature = 98.6;
+double wallet = 125.50;
+double weight = 68.9;
+
+// Double operations
+double totalCost = wallet * 2;  // 251.0
+double pricePerItem = wallet / 5;  // 25.1
+double temperatureInC = (temperature - 32) * 5/9;  // Converting F to C
+```
+
+## Boolean Examples
+```java
+boolean isRaining = true;
+boolean isSunny = false;
+
+// Boolean operations
+boolean canPlayOutside = !isRaining && isSunny;  // false
+boolean needUmbrella = isRaining || isSunny;     // true
+boolean isNormal = temperature >= 98.6;          // true
+```
+
+## Char Examples
+```java
+char grade = 'A';
+char symbol = '$';
+char number = '7';
+
+// Char operations
+boolean isVowel = (grade == 'A' || grade == 'E');  // true
+char nextGrade = (char)(grade + 1);  // 'B'
+```
+
+---
+# 2. Advanced Variable Usage
+
+## Type Conversion Examples
+```java
+// Implicit conversion (widening)
+int smallNumber = 10;
+double bigNumber = smallNumber;  // 10.0
+
+// Explicit conversion (narrowing)
+double price = 19.99;
+int roundedPrice = (int)price;  // 19
+
+// String conversion
+String strNumber = "123";
+int convertedNumber = Integer.parseInt(strNumber);  // 123
+```
+
+## Variable Scope Examples
+```java
+public class ScopeExample {
+    int globalVar = 10;  // Class-level scope
+    
+    public void exampleMethod() {
+        int localVar = 20;  // Method-level scope
+        
+        for (int i = 0; i < 3; i++) {  // Block-level scope
+            int blockVar = 30;
+            System.out.println(globalVar + localVar + blockVar + i);
+        }
+        // blockVar is not accessible here
+    }
+}
+```
+
+---
+# 3. Complex Operator Examples
+
+## Arithmetic Combinations
+```java
+int a = 10, b = 3;
+
+// Complex arithmetic
+int result1 = (a + b) * 2;  // 26
+int result2 = a % b + a / b;  // 1 + 3 = 4
+int result3 = (a * b) - (a / b);  // 30 - 3 = 27
+
+// Increment/Decrement
+int x = 5;
+System.out.println(x++);  // Prints 5, then x becomes 6
+System.out.println(++x);  // x becomes 7, then prints 7
+```
+
+## Comparison in Practice
+```java
+int score = 85;
+int passingGrade = 60;
+int excellentGrade = 90;
+
+boolean isPassing = score >= passingGrade;  // true
+boolean needsImprovement = score < excellentGrade;  // true
+boolean isPerfect = score == 100;  // false
+```
+
+## Logical Operator Combinations
+```java
+boolean hasPass = true;
+boolean isStudent = true;
+boolean isWeekend = false;
+boolean isHoliday = true;
+
+// Complex conditions
+boolean canEnterLibrary = (hasPass && isStudent) || isWeekend;  // true
+boolean isSchoolDay = !isWeekend && !isHoliday;  // false
+```
+
+---
+# 4. Control Flow in Detail
+
+## Nested If Statements
+```java
+int age = 25;
+boolean hasLicense = true;
+boolean hasInsurance = true;
+
+if (age >= 18) {
+    if (hasLicense) {
+        if (hasInsurance) {
+            System.out.println("Can rent a car");
+        } else {
+            System.out.println("Need insurance");
+        }
+    } else {
+        System.out.println("Need license");
+    }
+} else {
+    System.out.println("Too young to rent");
+}
+```
+
+## Advanced Loop Examples
+```java
+// Nested loops
+for (int i = 1; i <= 3; i++) {
+    for (int j = 1; j <= 3; j++) {
+        System.out.print(i * j + "\t");
+    }
+    System.out.println();
+}
+
+// Break and continue
+for (int i = 1; i <= 10; i++) {
+    if (i == 5) continue;  // Skip 5
+    if (i == 8) break;     // Stop at 8
+    System.out.println(i);
+}
+
+// Do-while loop
+int count = 0;
+do {
+    System.out.println("Count: " + count);
+    count++;
+} while (count < 3);
+```
+
+---
+# 5. Array Techniques
+
+## Array Manipulation
+```java
+// Array declaration and initialization
+int[] numbers = new int[5];
+int[] scores = {95, 88, 75, 91, 83};
+
+// Array operations
+for (int i = 0; i < numbers.length; i++) {
+    numbers[i] = i * 10;
+}
+
+// Finding maximum value
+int max = scores[0];
+for (int score : scores) {
+    if (score > max) {
+        max = score;
+    }
+}
+
+// Copying arrays
+int[] copyScores = new int[scores.length];
+System.arraycopy(scores, 0, copyScores, 0, scores.length);
+
+// 2D Arrays
+int[][] matrix = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+};
+
+// Accessing 2D array elements
+for (int i = 0; i < matrix.length; i++) {
+    for (int j = 0; j < matrix[i].length; j++) {
+        System.out.print(matrix[i][j] + " ");
+    }
+    System.out.println();
+}
+```
+
+---
+# 6. Advanced Input/Output
+
+## Scanner Examples
+```java
+import java.util.Scanner;
+
+Scanner scanner = new Scanner(System.in);
+
+// Reading different types of input
+System.out.print("Enter name: ");
+String name = scanner.nextLine();
+
+System.out.print("Enter age: ");
+int age = scanner.nextInt();
+scanner.nextLine();  // Clear buffer
+
+System.out.print("Enter salary: ");
+double salary = scanner.nextDouble();
+
+// Input validation
+System.out.print("Enter a number between 1-10: ");
+int number = scanner.nextInt();
+if (number >= 1 && number <= 10) {
+    System.out.println("Valid input!");
+} else {
+    System.out.println("Invalid input!");
+}
+```
+
+## Formatted Output
+```java
+// Printf formatting
+double price = 19.99;
+System.out.printf("Price: $%.2f%n", price);
+
+String name = "John";
+int age = 25;
+System.out.printf("Name: %-10s Age: %03d%n", name, age);
+
+// StringBuilder for string manipulation
+StringBuilder sb = new StringBuilder();
+sb.append("Hello ");
+sb.append("World!");
+sb.insert(6, "Beautiful ");
+System.out.println(sb.toString());  // Hello Beautiful World!
+```
+
+---
+# 7. Common Error Solutions
+
+## Error Prevention Examples
+```java
+// Array bounds check
+int[] arr = {1, 2, 3};
+int index = 4;
+if (index < arr.length) {
+    System.out.println(arr[index]);
+} else {
+    System.out.println("Index out of bounds!");
+}
+
+// Division by zero check
+int numerator = 10;
+int denominator = 0;
+if (denominator != 0) {
+    System.out.println(numerator / denominator);
+} else {
+    System.out.println("Cannot divide by zero!");
+}
+
+// Null check
+String str = null;
+if (str != null) {
+    System.out.println(str.length());
+} else {
+    System.out.println("String is null!");
+}
+```
+
+---
+# 8. Best Practices in Action
+
+## Code Organization Example
+```java
+// Good variable names and comments
+int numberOfStudents = 25;  // Total students in class
+double averageScore = 85.5; // Class average
+
+// Constants for magic numbers
+final int MAX_ATTEMPTS = 3;
+final double TAX_RATE = 0.08;
+
+// Proper indentation and spacing
+if (numberOfStudents > 0) {
+    double totalScore = numberOfStudents * averageScore;
+    System.out.println("Total score: " + totalScore);
+}
+
+// Breaking down complex operations
+boolean isValidStudent = numberOfStudents > 0 && 
+                        numberOfStudents <= MAX_ATTEMPTS && 
+                        averageScore >= 0;
+```
+
+Would you like me to:
+1. Add more specific examples for any section?
+2. Include additional error handling scenarios?
+3. Add exercises for practice?
